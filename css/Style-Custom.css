@@ -8,16 +8,17 @@ background-position: center;
 z-index: 1;
 
 }
-.Backdrop{
+/*#backdrop{
 
-background: url('../img/backdrop2.jpg');
+background: url('../img/BackdropIMG.jpg');
 background-size: cover;
-left: -100px;
-height: 200%;
-width: 200%;
-z-index: 2;
+background-position: center;
+height: 100%;
+width: 100%;
+filter: blur(1.5px);
+z-index: 1;
 }
-
+*/
 .contentbox{
     width: 800px;
     height: 580px;
@@ -43,16 +44,17 @@ z-index: 2;
     color: black
 }
 .contentboxh{
-    width: 800;
-    height: 580px;
+    width: 1040px;
+    height: 650px;
+    background-color: white;
     
     padding: 25px;
     margin: 25px;
     color: white;
     z-index: 100;
     position: absolute;
-    top: 50px;
-    left: 300px;
+    top: 60px;
+    left: 200px;
 
 }
 .contentboxh > h1{
@@ -74,7 +76,3 @@ z-index: 2;
 background-color: lightsalmon
 }
 
-.CV {
-    width: 900px;
-    height: 1260px;
-}
