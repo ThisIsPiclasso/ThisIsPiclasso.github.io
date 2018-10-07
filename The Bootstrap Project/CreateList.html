@@ -23,8 +23,9 @@
 
 
     function example_append() {''
-        var $newline = $( "<li class= 'list-group-item' id='Item" + ItemNum +"'>" + $('.form-control').val() + "<button   class='btn btn-danger' onclick='deleteItem(" + ItemNum + ")'> Verwijder</button></li>" )
+        var $newline = $( "<li class= 'list-group-item' id='Item" + ItemNum +"'>" + $('.form-control').val() + "<button   class='btn btn-danger' onclick='deleteItem(" + ItemNum + ")'> Verwijder</button></li>" ).hide().fadeIn(1000);
     $('.list-group').append($newline)
+    
     /* $('.form-control')[0].reset() */;
     ItemNum++
  
@@ -41,7 +42,10 @@ function tableInputKeyPress(e){
 
 function deleteItem(Item){
   
-  $('li').remove("#Item" + Item);
+  $('#Item'+ Item).fadeOut(500,function()
+                        {$('li').remove("#Item" + Item)
+                         }
+                 );
   
 }
 
@@ -52,8 +56,8 @@ function deleteItem(Item){
         <nav class="navbar navbar-dark bg-primary">
                 <form class="form-inline">
                         <a class="btn btn-primary" type="button" href="./Website Lander.html">Home</a>
-                        <a class="btn btn-sm btn-primary" type="button">Bekijk lijst</a>
-                        <a class="btn btn-sm btn-primary" type="button">Creeër lijst</a>
+                        <a class="btn btn-sm btn-primary" href="./WatchList.html" type="button">Bekijk lijst</a>
+                        <a class="btn btn-sm btn-primary" href="./CreateList.html" type="button">Creeër lijst</a>
                 </form>
               </nav>
         <div class= "LanderBackdrop"></div>
@@ -67,8 +71,8 @@ function deleteItem(Item){
             </div>
         <ul class="list-group">
             <li class="list-group-item" id="Item1">Kamerplant <button   class="btn btn-danger "id="Item1"onclick="deleteItem(1)"> Verwijder</button></li>
-            <li class="list-group-item" id="Item2">Kinderstoel<button   class="btn btn-danger "id="Item1"onclick="deleteItem(2)"> Verwijder</button></li>
-            <li class="list-group-item" id="Item3">Deegroller<button   class="btn btn-danger "id="Item1"onclick="deleteItem(3)"> Verwijder</button></li>
+            <li class="list-group-item" id="Item2">Kinderstoel<button   class="btn btn-danger "id="Item2"onclick="deleteItem(2)"> Verwijder</button></li>
+            <li class="list-group-item" id="Item3">Deegroller<button   class="btn btn-danger "id="Item3"onclick="deleteItem(3)"> Verwijder</button></li>
             </ul> 
         
         <form class= "form-inline">
