@@ -1,35 +1,11 @@
 /*!
-    * Start Bootstrap - Grayscale v6.0.0 (https://startbootstrap.com/themes/grayscale)
+    * Start Bootstrap - Agency v6.0.0 (https://startbootstrap.com/template-overviews/agency)
     * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+    * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
     */
     (function ($) {
     "use strict"; // Start of use strict
 
-    //countdown info
-    const second = 1000,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
-// countdown function
-let countDown = new Date('Jun 25, 2020 11:00:00').getTime(),
-  x = setInterval(function() {    
-
-    let now = new Date().getTime(),
-        distance = countDown - now;
-
-    document.getElementById('days').innerText = Math.floor(distance / (day)),
-      document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-      document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-      document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-
-    //do something later when date is reached
-    //if (distance < 0) {
-    //  clearInterval(x);
-    //  'IT'S MY BIRTHDAY!;
-    //}
-
-  }, second)
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
@@ -44,7 +20,7 @@ let countDown = new Date('Jun 25, 2020 11:00:00').getTime(),
             if (target.length) {
                 $("html, body").animate(
                     {
-                        scrollTop: target.offset().top - 70,
+                        scrollTop: target.offset().top - 72,
                     },
                     1000,
                     "easeInOutExpo"
@@ -62,7 +38,7 @@ let countDown = new Date('Jun 25, 2020 11:00:00').getTime(),
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
         target: "#mainNav",
-        offset: 100,
+        offset: 74,
     });
 
     // Collapse Navbar
